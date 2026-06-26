@@ -7,20 +7,41 @@ memory**, a **zero-hallucination guardrail**, **human-in-the-loop** writes, and
 an **LLMOps evaluation** harness. Runs fully **offline** by default; plug in an
 Anthropic key for real Claude.
 
-> Capstone for the Applied Generative AI Specialization.
+> Capstone for the Applied Generative AI Specialisation.
 
 ## Quick start
 
+**One command** (from the repository root):
+
 ```powershell
-cd capstone
-python -m venv venv311
-venv311\Scripts\activate
+# Windows / PowerShell
+.\setup_run.ps1
+```
+```bash
+# macOS / Linux
+bash setup_run.sh
+```
+
+This creates a virtual environment, installs dependencies, runs a smoke test
+(loads patients + runs the agent offline), and launches the dashboard at
+http://localhost:8501. The first run downloads PyTorch and a ~80 MB embedding
+model, so allow a few minutes.
+
+**Manual setup** (equivalent steps):
+
+```powershell
+python -m venv venv
+venv\Scripts\activate            # macOS/Linux: source venv/bin/activate
 pip install -r requirements.txt
-copy .env.example .env            # leave the key blank to run offline
+copy .env.example .env           # leave the key blank to run offline
 streamlit run app/streamlit_app.py
 ```
 
-Open http://localhost:8501. (First run downloads a ~80 MB embedding model.)
+Run the notebook instead with: `jupyter notebook HCAsst_Capstone.ipynb`
+
+The system runs **fully offline** by default (deterministic MockLLM). To use real
+Claude, paste an Anthropic API key into the dashboard sidebar, or set
+`ANTHROPIC_API_KEY` in `.env`.
 
 ## What it does (the four services)
 
@@ -70,8 +91,10 @@ config/        settings (offline switch)
 src/hcasst/    models, llm, tools, rag, memory, agent, eval, db, obs
 app/           Streamlit dashboard (6 views)
 data/seed/     seed patients
+datasets/      instructor dataset (records.xlsx + SOAP PDF reports)
 docs/          ARD, Technical Spec, Implementation Guide, User Guide, Playbook
-tests/         tests
+HCAsst_Capstone.ipynb   runnable notebook walkthrough
+setup_run.ps1 / .sh     one-command setup + launch
 ```
 
 ## Evaluation
