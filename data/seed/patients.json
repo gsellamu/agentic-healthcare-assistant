@@ -1,0 +1,31 @@
+[ 
+  {
+    "//EHR Records": "Seed patient records in EHR for simplicity",
+    "id": "seed-001",
+    "name": "Raman Iyer",
+    "gender": "male",
+    "birth_date": "1955-04-02",
+    "items": [
+      { "kind": "condition",   "text": "Chronic kidney disease, stage 3b",  "date": "2024-11-10" },
+      { "kind": "condition",   "text": "Type 2 diabetes mellitus",          "date": "2019-03-22" },
+      { "kind": "condition",   "text": "Hypertension",                      "date": "2018-07-15" },
+      { "kind": "medication",  "text": "Lisinopril 10 mg daily",            "date": "2024-11-10" },
+      { "kind": "medication",  "text": "Empagliflozin 10 mg daily",         "date": "2024-11-10" },
+      { "kind": "observation", "text": "eGFR 38 mL/min/1.73m2",             "date": "2025-05-01" },
+      { "kind": "allergy",     "text": "Penicillin — rash",                 "date": "2010-01-01" },
+      { "kind": "note",         "text": "Patient counseled on low-sodium renal diet; expressed concern about future dialysis. Adherent to current meds. Daughter present for visit.", "date": "2025-05-01" }
+    ]
+  },
+  {
+    "id": "seed-002",
+    "name": "Meera Nair",
+    "gender": "female",
+    "birth_date": "1968-09-12",
+    "items": [
+      { "kind": "condition",   "text": "Atrial fibrillation",      "date": "2023-02-18" },
+      { "kind": "medication",  "text": "Apixaban 5 mg twice daily", "date": "2023-02-18" },
+      { "kind": "observation", "text": "CHA2DS2-VASc score 3",      "date": "2023-02-18" },
+      { "kind": "note",        "text": "Patient counseled on low-sodium BP diet; Adherent to current meds. Spouse present for visit.", "date": "2025-05-01" }
+    ]
+  }
+]

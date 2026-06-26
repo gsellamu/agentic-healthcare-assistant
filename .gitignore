@@ -1,0 +1,23 @@
+.env
+.venv/
+venv311/
+__pycache__/
+data/cache/
+*.sqlite
+
+
+.env
+PDF Folder/
+datasets/PDF Folder/
+sales_data.csv
+*.db
+data/index/
+venv311/
+__pycache__/
+*.pyc
+
+submission/
+*.zip
+.ipynb_checkpoints/
+HCAsst_source.zip
+/Agentic Healthcare Assistant for Medical Task Automation/
